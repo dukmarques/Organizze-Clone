@@ -8,10 +8,13 @@ import android.view.View;
 import com.example.eduardo.organizze.R;
 import com.example.eduardo.organizze.activity.CadastroActivity;
 import com.example.eduardo.organizze.activity.LoginActivity;
+import com.example.eduardo.organizze.config.ConfiguracaoFirebase;
+import com.google.firebase.auth.FirebaseAuth;
 import com.heinrichreimersoftware.materialintro.app.IntroActivity;
 import com.heinrichreimersoftware.materialintro.slide.FragmentSlide;
 
 public class MainActivity extends IntroActivity {
+    private FirebaseAuth autenticacao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,10 +49,15 @@ public class MainActivity extends IntroActivity {
         addSlide(new FragmentSlide.Builder()
                 .background(android.R.color.white)
                 .fragment(R.layout.intro_cadastro)
-                .canGoBackward(false)
                 .canGoForward(false) //Resolver problema de fechar app ao passar todas as telas
                 .build()
         );
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        verificarUsuarioLogado(); //Verifica se o usuário já está logado
     }
 
     public void btEntrar(View v){
@@ -58,5 +66,16 @@ public class MainActivity extends IntroActivity {
 
     public void btCadastrar(View v){
         startActivity(new Intent(this, CadastroActivity.class));
+    }
+
+    public void verificarUsuarioLogado(){
+        autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
+        if (autenticacao.getCurrentUser() != null){
+            abrirTelaPrincipal();
+        }
+    }
+
+    public void abrirTelaPrincipal(){
+        startActivity(new Intent(this, PrincipalActivity.class));
     }
 }
