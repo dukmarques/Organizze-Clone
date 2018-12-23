@@ -1,10 +1,11 @@
-package com.example.eduardo.organizze;
+package com.example.eduardo.organizze.activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.eduardo.organizze.R;
 import com.example.eduardo.organizze.activity.CadastroActivity;
 import com.example.eduardo.organizze.activity.LoginActivity;
 import com.heinrichreimersoftware.materialintro.app.IntroActivity;
