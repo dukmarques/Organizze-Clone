@@ -5,7 +5,7 @@
 https://github.com/heinrichreimer/material-intro
 
 ## Biblioteca para o Floating Action Menu:
-https://github.com/Clans/FloatingActionButton
+https://github.com/Clans/FloatingActionButton \n
 Alternativas/Complementos: 
 https://github.com/futuresimple/android-floating-action-button
 https://github.com/oguzbilgener/CircularFloatingActionMenu
