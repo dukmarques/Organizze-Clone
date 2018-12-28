@@ -1,4 +1,4 @@
-## Organizze Clone
+﻿## Organizze Clone
 
 
 ## Biblioteca utilizada para o Slider de apresentação do App:
@@ -13,3 +13,7 @@ https://github.com/oguzbilgener/CircularFloatingActionMenu
 
 ## Biblioteca para o CalendarView:
 https://github.com/prolificinteractive/material-calendarview
+
+### Update futuro: add gráficos
+
+Biblio: https://github.com/PhilJay/MPAndroidChart
